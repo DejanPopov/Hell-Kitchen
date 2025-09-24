@@ -37,7 +37,7 @@ using UnityEngine.InputSystem.Utilities;
 ///         m_Actions = new MyActions_Actions();              // Create asset object.
 ///         m_Player = m_Actions.Player;                      // Extract action map object.
 ///         m_Player.AddCallbacks(this);                      // Register callback interface IPlayerActions.
-///     }
+///     
 ///
 ///     void OnDestroy()
 ///     {
@@ -83,7 +83,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     /// Constructs a new instance.
     /// </summary>
     public @PlayerInputActions()
-    {
+    { 
         asset = InputActionAsset.FromJson(@"{
     ""version"": 1,
     ""name"": ""PlayerInputActions"",
@@ -297,7 +297,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
         /// <remarks>
-        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side effects.
         /// </remarks>
         /// <seealso cref="PlayerActions" />
         private void UnregisterCallbacks(IPlayerActions instance)
